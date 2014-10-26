@@ -1,0 +1,39 @@
+---
+title: "CodeBook"
+author: "Chad Mathews"
+date: "Sunday, October 26, 2014"
+output: html_document
+---
+##PROCESS
+1. Download and Unzip raw data
+2. Read data from files for X_test, y_test and subject_test files.
+3. Combine data from the above tables adding descriptive labels to the 
+   "Activity" and "Subject" columns. Creating the data.frame - data1
+4. Read data from files for X_train, y_train and subject_train files.
+5. Combine data from the above tables adding descriptive 
+   labels to the "Activity" and "Subject" columns. Create the data.frame - data2
+6. Combine the data1 and data2 files adding labels 
+   to the remaining columns from the Features file found in the orginal raw data files. 
+7. Select the columns for "mean" and "std" in addition 
+   to "Activity"" and "Subject"" while deleting the uneeded "meanFreq()" columns.
+8. Change Activity names from numbers to corresponding descriptions:
+        1 = "WALKING"
+        2 = "WALKING UPSTAIRS"
+        3 = "WALKING DOWNSTAIRS"
+        4 = "SITTING"
+        5 = "STANDING"
+        6 = "LAYING"
+        
+9. Clean up column labels to make format tidy. 
+10. Create independent"tidydata" set with the average 
+    of each variable for each activity and each subject. 
+    
+
+
+## Data Sets Generated
+1. CleanCols - data set of 68 variables and 10299 observation. Variable include only the columns   containing "mean" and "std".
+
+2. tidydata - 3 variables (subject, activity, meansamples) by 180 observations.     
+
+
+
